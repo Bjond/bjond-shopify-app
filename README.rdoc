@@ -11,7 +11,7 @@ This will serve as the Bjond integration app with the Shopify API.
 
 - Create an RVM gemset. This project currently uses ruby 2.2.2, so the command would be. (ruby version listed in .ruby-version and gemset name listed in .ruby-gemset) - 
 
-    rvm ruby-2.2.2 
+    rvm ruby-2.2.5 
     rvm gemset create bjond-shopify-gems
 
 - Install necessary dependencies - 
