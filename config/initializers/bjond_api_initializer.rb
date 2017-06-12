@@ -54,37 +54,37 @@ config.active_definition = BjondApi::BjondAppDefinition.new.tap do |app_def|
   app_def.description  = 'Bjönd interface with Shopify API.'
   app_def.iconURL      = 'https://cdn.shopify.com/assets/images/logos/shopify-bag.png'
   app_def.integrationEvent = [
-    BjondApi::BjondEvent.new.tap do |e|
-      e.id = 'a+24SHpC1fH+X2JBVbj2EBQb2nK8UOeyAg/pWJR2rXA='
-      e.jsonKey = 'orderConfirmedEvent'
-      e.name = 'Order Confirmed'
-      e.description = 'Shopify order has been confirmed'
-      e.serviceId = app_def.id
-      e.fields = [
-        BjondApi::BjondField.new.tap do |f|
-          f.id = 'b1ziXNHvnJV9OAgYmn7cBK727t8ERY1exc/xjgt3fJQ='
-          f.jsonKey = 'bjondPersonId'
-          f.name = 'Person'
-          f.description = 'The person identifier'
-          f.fieldType = 'Person'
-          f.event = e.id
-        end,
-        BjondApi::BjondField.new.tap do |f|
-          f.id = '4JciFUcqHHckkGS0CU7nw9v/wSLvQIwcxTOvZi3HlUw='
-          f.jsonKey = 'customerName'
-          f.name = 'String'
-          f.description = 'Customer name'
-          f.fieldType = 'Person'
-          f.event = e.id
-        end
-      ]
-    end,
+    # BjondApi::BjondEvent.new.tap do |e|
+    #   e.id = 'a+24SHpC1fH+X2JBVbj2EBQb2nK8UOeyAg/pWJR2rXA='
+    #   e.jsonKey = 'orderConfirmedEvent'
+    #   e.name = 'Order Confirmed'
+    #   e.description = 'Shopify order has been confirmed'
+    #   e.serviceId = app_def.id
+    #   e.fields = [
+    #     BjondApi::BjondField.new.tap do |f|
+    #       f.id = 'b1ziXNHvnJV9OAgYmn7cBK727t8ERY1exc/xjgt3fJQ='
+    #       f.jsonKey = 'bjondPersonId'
+    #       f.name = 'Person'
+    #       f.description = 'The person identifier'
+    #       f.fieldType = 'Person'
+    #       f.event = e.id
+    #     end,
+    #     BjondApi::BjondField.new.tap do |f|
+    #       f.id = '4JciFUcqHHckkGS0CU7nw9v/wSLvQIwcxTOvZi3HlUw='
+    #       f.jsonKey = 'customerName'
+    #       f.name = 'String'
+    #       f.description = 'Customer name'
+    #       f.fieldType = 'Person'
+    #       f.event = e.id
+    #     end
+    #   ]
+    # end,
 
     BjondApi::BjondEvent.new.tap do |e|
       e.id = 'vfYU0DAmBZWgWhogCW0z7KMktiEqG1O6fVVtTcfUHEk'
-      e.jsonKey = 'orderPlacedEvent'
-      e.name = 'Order Placed'
-      e.description = 'Shopify order has been placed'
+      e.jsonKey = 'orderCreatedEvent'
+      e.name = 'Order Created'
+      e.description = 'Shopify order has been created'
       e.serviceId = app_def.id
       e.fields = [
         BjondApi::BjondField.new.tap do |f|
@@ -97,10 +97,26 @@ config.active_definition = BjondApi::BjondAppDefinition.new.tap do |app_def|
         end,
         BjondApi::BjondField.new.tap do |f|
           f.id = 'KbsOMtyaFfc7T3OYAtC/3wFMMxoqWEYdKO/tCc50MdE='
-          f.jsonKey = 'customerName'
+          f.jsonKey = 'customerLastName'
+          f.name = 'Customer Last Name'
+          f.description = 'Billing last name'
+          f.fieldType = 'String'
+          f.event = e.id
+        end,
+        BjondApi::BjondField.new.tap do |f|
+          f.id = '1ZBx0wS/jBvOpvDdGGDEWWrSF07GWIwp/seUWFKdkRk='
+          f.jsonKey = 'customerFirstName'
           f.name = 'String'
-          f.description = 'Customer name'
-          f.fieldType = 'Person'
+          f.description = 'Customer first name'
+          f.fieldType = 'String'
+          f.event = e.id
+        end,
+        BjondApi::BjondField.new.tap do |f|
+          f.id = 'GzYxVgFcLQKTIG1FWjvlALvhJX8JVwO4kyxPRWEmJfA='
+          f.jsonKey = 'customerCity'
+          f.name = 'String'
+          f.description = 'Customer city'
+          f.fieldType = 'String'
           f.event = e.id
         end
       ]
