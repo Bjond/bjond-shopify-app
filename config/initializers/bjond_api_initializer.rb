@@ -48,47 +48,21 @@ end
 
 ### The integration app definition is sent to Bjond-Server core during registration.
 config.active_definition = BjondApi::BjondAppDefinition.new.tap do |app_def|
-  app_def.id           = 'pG8Due98n7k/RirY8l5nc0n3mDEuhdbddaYOyhK9eXQ='
+  app_def.id           = 'b93dc2ef-f791-48d1-b34c-cfdf11abcba7'
   app_def.author       = 'Bjönd, Inc.'
   app_def.name         = 'Bjönd Shopify App'
   app_def.description  = 'Bjönd interface with Shopify API.'
   app_def.iconURL      = 'https://cdn.shopify.com/assets/images/logos/shopify-bag.png'
   app_def.integrationEvent = [
-    # BjondApi::BjondEvent.new.tap do |e|
-    #   e.id = 'a+24SHpC1fH+X2JBVbj2EBQb2nK8UOeyAg/pWJR2rXA='
-    #   e.jsonKey = 'orderConfirmedEvent'
-    #   e.name = 'Order Confirmed'
-    #   e.description = 'Shopify order has been confirmed'
-    #   e.serviceId = app_def.id
-    #   e.fields = [
-    #     BjondApi::BjondField.new.tap do |f|
-    #       f.id = 'b1ziXNHvnJV9OAgYmn7cBK727t8ERY1exc/xjgt3fJQ='
-    #       f.jsonKey = 'bjondPersonId'
-    #       f.name = 'Person'
-    #       f.description = 'The person identifier'
-    #       f.fieldType = 'Person'
-    #       f.event = e.id
-    #     end,
-    #     BjondApi::BjondField.new.tap do |f|
-    #       f.id = '4JciFUcqHHckkGS0CU7nw9v/wSLvQIwcxTOvZi3HlUw='
-    #       f.jsonKey = 'customerName'
-    #       f.name = 'String'
-    #       f.description = 'Customer name'
-    #       f.fieldType = 'Person'
-    #       f.event = e.id
-    #     end
-    #   ]
-    # end,
-
     BjondApi::BjondEvent.new.tap do |e|
-      e.id = 'vfYU0DAmBZWgWhogCW0z7KMktiEqG1O6fVVtTcfUHEk'
+      e.id = '01e30e93-c7c6-4f74-af93-88bf26ef8da0'
       e.jsonKey = 'orderCreatedEvent'
       e.name = 'Order Created'
       e.description = 'Shopify order has been created'
       e.serviceId = app_def.id
       e.fields = [
         BjondApi::BjondField.new.tap do |f|
-          f.id = 'S5/ZjzUQ7Q1NcwCtAfdkv9cWRm0Yfph46JWmth59oGE='
+          f.id = '43bd9d37-4ccf-466b-8adc-ae1d65778c97'
           f.jsonKey = 'bjondPersonId'
           f.name = 'Person'
           f.description = 'The person identifier'
@@ -96,7 +70,7 @@ config.active_definition = BjondApi::BjondAppDefinition.new.tap do |app_def|
           f.event = e.id
         end,
         BjondApi::BjondField.new.tap do |f|
-          f.id = 'KbsOMtyaFfc7T3OYAtC/3wFMMxoqWEYdKO/tCc50MdE='
+          f.id = 'efcb95f2-ee96-46e6-9463-1075e98e9910'
           f.jsonKey = 'customerLastName'
           f.name = 'Customer Last Name'
           f.description = 'Billing last name'
@@ -104,7 +78,7 @@ config.active_definition = BjondApi::BjondAppDefinition.new.tap do |app_def|
           f.event = e.id
         end,
         BjondApi::BjondField.new.tap do |f|
-          f.id = '1ZBx0wS/jBvOpvDdGGDEWWrSF07GWIwp/seUWFKdkRk='
+          f.id = '4b3052d4-0cec-42f4-9bdb-9056d52ead97'
           f.jsonKey = 'customerFirstName'
           f.name = 'String'
           f.description = 'Customer first name'
@@ -112,7 +86,7 @@ config.active_definition = BjondApi::BjondAppDefinition.new.tap do |app_def|
           f.event = e.id
         end,
         BjondApi::BjondField.new.tap do |f|
-          f.id = 'GzYxVgFcLQKTIG1FWjvlALvhJX8JVwO4kyxPRWEmJfA='
+          f.id = 'db2d515c-4eab-4aee-a2b6-47bfcc888e1f'
           f.jsonKey = 'customerCity'
           f.name = 'String'
           f.description = 'Customer city'
