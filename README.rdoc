@@ -2,6 +2,9 @@
 
 This will serve as the Bjond integration app with the Shopify API.
 
+For information on how to fire Shopify events, see this wiki:
+https://github.com/Bjond/bjond-health/wiki/Firing-Shopify-Events
+
 
 == Development
 
